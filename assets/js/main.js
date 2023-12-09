@@ -4,8 +4,8 @@ window.onload=function(){
 }
     function header(){
 
-        var nizMeni=["index.html", "projects.html", "gallery.html", "contact.html", "author.html"];
-        var nizNaziv=["Home", "Projects", "Gallery", "Contact", "Author"]
+        var nizMeni=["index.html", "#about-us", "#naslov", "#interiorDesignForm", "author.html"];
+        var nizNaziv=["Home", "Projects", "Gallery", "Contact", "Author"];
 
         var divLista=document.getElementById("meni");
         var ispis="<ul class='nav'>";
@@ -17,6 +17,17 @@ window.onload=function(){
         divLista.innerHTML=ispis;
 
     }
+    let srcSlajder=['assets/img/cover.jpg', 'assets/img/coverr3.jpg', 'assets/img/coverr8.jpg'];
+    setInterval(promeniPozadinu, 4000);
+    let trenutnaSlika=1;
+    function promeniPozadinu(){
+        let slajder=document.querySelector("#slajder-slike");
+        
+        slajder.src = srcSlajder[trenutnaSlika];
+        trenutnaSlika = (trenutnaSlika+1) % srcSlajder.length;
+        console.log(srcSlajder[trenutnaSlika]);
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
         var imagePaths = [
             "assets/img/slike/kucs.jpg",
