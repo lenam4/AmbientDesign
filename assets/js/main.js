@@ -1,9 +1,5 @@
 window.onload=function(){
     header();
-    var divSlikeTest=document.getElementById("slike");
-    if(divSlikeTest !=null){ucitavanjeSlika();}
-    var divUslugaTest=document.getElementById("usluge");
-    if(divUslugaTest !=null){ucitavanjeUsluga();}
 
 }
     function header(){
@@ -23,10 +19,16 @@ window.onload=function(){
     }
     document.addEventListener("DOMContentLoaded", function() {
         var imagePaths = [
-            "assets/img/coverr1.jpg",
-            "assets/img/coverr5.jpg",
-            "assets/img/coverr3.jpg",
-            // Dodajte još slika po potrebi
+            "assets/img/slike/kucs.jpg",
+            "assets/img/slike/kuhinja.jpg",
+            "assets/img/slike/kuhinja2.jpg",
+            "assets/img/slike/kupatilo.jpg",
+            "assets/img/slike/ogledalo.jpg",
+            "assets/img/slike/soba1.jpg",
+            "assets/img/slike/soba2.jpg",
+            "assets/img/slike/soba3.jpg",
+            "assets/img/slike/terasa.jpg",
+            
         ];
     
         var galleryContainer = document.getElementById("gallery");
@@ -51,5 +53,25 @@ window.onload=function(){
             loop: true
         });
     });
-    
+    function submitForm() {
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
 
+        // Perform validation if needed
+        if (!fullName || !email || !phone || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Here, you can send the form data to the server or perform other actions
+        console.log("Form submitted with the following data:");
+        console.log("Full Name: " + fullName);
+        console.log("Email: " + email);
+        console.log("Phone: " + phone);
+        console.log("Message: " + message);
+
+        // You may want to reset the form after submission
+        document.getElementById('interiorDesignForm').reset();
+    }

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <script src="assets/js/main.js" type="text/javascript"></script>
+    
     <div id="okvir">
         <div id="navbar">
             <div id="naziv"><h1>AmbientDesign</h1></div>
@@ -39,9 +39,11 @@
         <h2>About Us</h2>
         <h3>Serving Since 1950</h3>
     </div>
+    </div>
     <div id="sadrzaj">
         <div class="deo">
             <p>Welcome to a world where aesthetics meet functionality, where every detail tells a story of your unique style. At AmbientDesign, we are committed to creating spaces that not only reflect your character but also enhance your everyday life.</p>
+            <p>Step into a realm of endless possibilities for transforming spaces with our expert team of interior designers. We are here to turn your home or business space into an inspirational and functional environment that reflects your unique style and needs.</p>
         </div>
         <div class="deo">
             <img src="assets/img/cover6.jpg" alt="deo"/>
@@ -50,10 +52,26 @@
             <p>In every project, we approach with care and passion, focused on turning your home or business space into reflections of your dreams and ambitions. Whether it's a luxurious apartment, a modern office, or a cozy relaxation corner, our team of interior designers uses creativity and expertise to create a space that mirrors your unique vision.</p>
         </div>
     </div>
+    <div id="naslov" class="section-title"><h2>Gallery</h2></div>
     <div id="gallery"></div>
+
+    <form id="interiorDesignForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="script.js"></script>
-    
 </body>
 </html>
