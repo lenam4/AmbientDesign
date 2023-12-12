@@ -70,22 +70,67 @@ window.onload=function(){
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
 
-        // Perform validation if needed
+       
         if (!fullName || !email || !phone || !message) {
             alert("Please fill in all fields.");
             return;
         }
 
-        // Here, you can send the form data to the server or perform other actions
+       
         console.log("Form submitted with the following data:");
         console.log("Full Name: " + fullName);
         console.log("Email: " + email);
         console.log("Phone: " + phone);
         console.log("Message: " + message);
 
-        // You may want to reset the form after submission
+        
         document.getElementById('interiorDesignForm').reset();
     }
+
+
+
+
+    function submitForm() {
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+    
+        // Validacija imena
+        if (fullName.length < 3 || !(/^[A-ZČĆŠĐŽ][a-zčćšđž]*\s[A-ZČĆŠĐŽ][a-zčćšđž]*$/).test(fullName)) {
+            alert("Ime i prezime moraju biti uneseni, a početna slova velika.");
+            return;
+        }
+    
+        // Validacija email adrese
+        if (!(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/).test(email)) {
+            alert("Unesite ispravnu email adresu.");
+            return;
+        }
+    
+        // Validacija telefona
+        if (!(/^\d{10}$/).test(phone)) {
+            alert("Telefon mora imati tačno 10 cifara.");
+            return;
+        }
+    
+        // Validacija poruke
+        if (message.length === 0) {
+            alert("Unesite poruku.");
+            return;
+        }
+    
+        // Ako je sve u redu, možete poslati formu ili izvršiti druge radnje
+        console.log("Form submitted with the following data:");
+        console.log("Full Name: " + fullName);
+        console.log("Email: " + email);
+        console.log("Phone: " + phone);
+        console.log("Message: " + message);
+    
+        // Opciono, možete resetovati formu nakon slanja
+        document.getElementById('interiorDesignForm').reset();
+    }
+
    
 
     var footer = document.createElement("footer");
@@ -124,3 +169,8 @@ window.onload=function(){
     
     // Dodavanje futera na kraj body elementa
     document.body.appendChild(footer);
+
+
+
+
+ 
