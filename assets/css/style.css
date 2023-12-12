@@ -28,7 +28,7 @@
     width:70%;
 }
 .nav{
-    margin-left: 10%;
+    margin-left: 6%;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -145,10 +145,6 @@
             width: calc(50% - 20px); /* Na manjim ekranima, postavljamo širinu na 50% */
         }
     }
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
 
     form {
         max-width: 600px;
@@ -183,4 +179,30 @@
 
     button:hover {
         background-color: #45a049;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3%;
+        font-size: 18px;
+    }
+    footer a {
+        color: white;
+        text-decoration: none;
+        margin:10px;
+        padding:13px;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    footer img {
+        width: 30px;
+        height: 30px;
     }

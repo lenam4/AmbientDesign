@@ -86,3 +86,41 @@ window.onload=function(){
         // You may want to reset the form after submission
         document.getElementById('interiorDesignForm').reset();
     }
+   
+
+    var footer = document.createElement("footer");
+    var siteName = document.createElement("div");
+    var pageLinks = document.createElement("div");
+    var socialIcons = document.createElement("div");
+    
+    // Postavljanje sadržaja za siteName
+    siteName.innerHTML = "<p>AmbientDesign</p>";
+    
+    // Postavljanje sadržaja za pageLinks
+    var pages = ["Home", "About-us", "Gallery", "Contact", "Author"];
+    for (var i = 0; i < pages.length; i++) {
+        var pageLink = document.createElement("a");
+        pageLink.href = pages[i].toLowerCase() + ".html";
+        pageLink.textContent = pages[i];
+        pageLinks.appendChild(pageLink);
+    }
+    
+    // Postavljanje sadržaja za socialIcons
+    var instagramIcon = document.createElement("a");
+    instagramIcon.href = "https://www.instagram.com/"; // Dodajte link ka Instagram nalogu
+    instagramIcon.innerHTML = '<img src="assets/img/instagram.png" alt="Instagram">';
+    
+    var facebookIcon = document.createElement("a");
+    facebookIcon.href = "https://www.facebook.com/"; // Dodajte link ka Facebook stranici
+    facebookIcon.innerHTML = '<img src="assets/img/facebook.png" alt="Facebook">';
+    
+    socialIcons.appendChild(instagramIcon);
+    socialIcons.appendChild(facebookIcon);
+    
+    // Dodavanje elemenata u futer
+    footer.appendChild(siteName);
+    footer.appendChild(pageLinks);
+    footer.appendChild(socialIcons);
+    
+    // Dodavanje futera na kraj body elementa
+    document.body.appendChild(footer);
